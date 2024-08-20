@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <h1 style="text-align:center;">Placements<b style="color:Red;"> Records</b></h1>
+    <div class="col-sm-3">
+        <ul class="list-group">
+            <li class="list-group-item active" aria-current="true">our courses</li>
+            {% if course %}
+            {% for x in course %}
+
+            <a href="/user/placements?msg={{x.id}}" style="text-decoration:none;"><li class="list-group-item">{{x.cname}}</li></a>
+            {% endfor %}
+            {% endif %}
+            <a href="/user/placements/" style="text-decoration:none;"><li class="list-group-item">{{x.cname}}All Placement</li></a>
+        </ul>
+    </div>
+    <div class="col-sm-9 bg-light" style="background:#eeeeee;">
+        <div class="row"style="background:#eeeeee;">
+            {% if placement %}
+                    {% for x in placement %}
+            <div class="col-sm-3" style="min-height:500px;">
+                <div class="row m-1" style="background:#0D47A1;color:white;min-height:590px;">
+                    <img src="/{{x.stupic}}" class="d block w-100 mt-1" alt="">
+                    <h5 style="margin-top:2px;">Student Name:-<span style="color:#FF8F00">{{x.name}}</span></h5>
+                    <h6>Course Name -<span>{{x.pcourse}}</span></h6>
+                    <h6>Brance - <span>{{x.branch}}</span></h6>
+                    <h6>Company Name -<span>{{x.cmpname}}</span></h6>
+                    <img style="border-radius:70%;" src="/{{x.cmplogo}}" class="d block w-50" alt="">
+                    <h6>City -<span>{{x.city}}</span></h6>
+                    <h6>Year -<span>{{x.pyear}}</span></h6>
+                    <h6>Designation -<span>{{x.designation}}</span></h6>
+                    <h6>Passing Year-<span>{{x.pdate}}</span></h6>
+                </div>
+            </div>
+                    {% endfor %}
+                     {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

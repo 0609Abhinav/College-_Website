@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .form-control
+    {
+    margin-bottom:8px;
+    }
+</style>
+<div class="row">
+    <div class="h2 text-center p-3"><span style="color:black;">Contact</span><b style="color:#ff2020 ">Us<i
+            class="fa fa-phone"></i></b></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10" style="background:#FFE082">
+        <div class="row">
+            <div class="col-sm-5 m-5 bg-light">
+                <ul class="list-unstyled mt-4">
+                    <li><h6><i class="fa fa-map-marker fa-2x" style="color:orange">Office Addres</i></h6>
+                        <b style="font-size:20px;"><p>San Francisco, CA 94126, USA</p></b></li>
+
+                    <li><i class="fa fa-phone mt-4 fa-2x" style="color:orange">Call Us</i>
+                        <b style="font-size:20px;"><p>+91 9621854341</p></b>
+                    </li>
+
+                    <li><i class="fa fa-envelope mt-4 fa-2x" style="color:orange">Mail Us</i>
+                        <b style="font-size:20px;"><p>abhinavtripathi2015@gmail.com</p></b>
+                    </li>
+                </ul>
+                <a href="https://www.facebook.com/abhinav2017/"><i class="fa fa-facebook ic px-2" style="color:blue;font-size:30px;"></i></a>
+                <a style="color:red;font-size:30px;" href="https://www.youtube.com/"><i class="fa fa-youtube ic px-2"></i></a>
+                <i style="color:green;font-size:30px;"class="fa fa-whatsapp ic px-2" title="9621854341"></i>
+                <a href="https://www.instagram.com/_abhinavtripathi/"><i class="fa fa-instagram ic px-2"style="color:#f400d0;font-size:30px;"></i></a>
+            </div>
+            <div class="col-sm-5 p-5" style="color:red">
+                <form method="post" autocomplete="off">
+                    {% csrf_token %}
+                    {% if S%}
+                    <div class="alert alert-success">
+                        Thanks for Enquiry...
+                    </div>
+                    {% endif %}
+
+                    Name<input type="text" placeholder="Enter your name" class="form-control" name="name"/>
+                    Email<input type="email" placeholder="Enter your Email" class="form-control" name="email"/>
+                    Address<input type="text" placeholder="Enter your Address" class="form-control" name="address"/>
+                    Mobile No<input type="text" placeholder="Enter your Mobile No." class="form-control" name="mobile"/>
+                    Message<textarea class="form-control" name="msg"></textarea>
+                    <input type="submit" value="SAVE" class="btn btn-danger ">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}

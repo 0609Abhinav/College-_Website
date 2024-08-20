@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .form-control
+    {
+    margin-bottom:10px;
+    }
+
+
+</style>
+<div class="h2 text-center m-2">Sign <b style="color:red">Up<i class="fa fa-user"></i></b></div>
+<div class="row m-3">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
+               <img src="{% static 'profile/Sup.jfif'%}"style="max-height:550px;width:400px;">
+            </div>
+            <div class="col-sm-5 p-4" style="background-image: linear-gradient(to bottom right, #E3F2FD,#F8BBD0,#FFCC80);">
+                <form method="post" autocomplete="off" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    Name<input type="text" placeholder="Enter your name" class="form-control" name="name"/>
+                    Email<input type="email" placeholder="Enter your Email" class="form-control" name="email"/>
+                    Address<textarea class="form-control" placeholder="Enter your Address" name="address"/></textarea>
+                    Mobile No<input type="text" placeholder="Enter your Mobile No." class="form-control" name="mobile"/>
+                    Profile Picture<input type="file" required class="form-control" name="fu"/>
+                    Password<input type="password" placeholder="Enter your password" class="form-control" name="pass"/>
+                    <center><input type="submit" value="SAVE" class="btn btn-danger"></center>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

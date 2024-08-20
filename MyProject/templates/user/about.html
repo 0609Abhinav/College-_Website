@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .paddingTB60
+    {
+    padding:60px 0px 60px 0px;
+    }
+.gray-bg
+{
+background: #F1F1F1 !important;
+}
+.about-title h1 {
+color: #535353;
+font-size:45px;
+font-weight:600;
+}
+.about-title span
+{
+color: #AF0808;
+font-size:45px;
+font-weight:700;
+}
+.about-title h3
+{
+color: #535353;
+font-size:23px;
+margin-bottom:24px;
+}
+.about-title p
+{
+color: #7a7a7a;
+line-height: 1.8;
+margin: 0 0 15px;
+}
+.about-paddingB
+{
+padding-bottom: 12px;
+}
+.about-img
+{
+padding-left: 57px;
+}
+
+/* Social Icons */
+.about-icons
+{
+margin:48px 0px 48px 0px ;
+}
+.about-icons i
+{
+margin-right: 10px;
+padding: 0px;
+font-size:35px;
+color:#323232;
+box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+}
+.about-icons li
+{
+display:inline-block;
+}
+#social-fb:hover
+{
+color: #3B5998;
+transition:all .001s;}
+ #social-tw:hover
+ {
+ color: #4099FF;
+ transition:all .001s;
+ }
+ #social-gp:hover
+ {
+ color: #d34836;
+ transition:all .001s;
+ }
+ #social-em:hover
+ {
+ color: #f39c12;
+ transition:all .001s;
+  }
+
+
+</style>
+<div class="about-section paddingTB60 gray-bg">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <div class="about-title clearfix">
+                <h1>About <span>Us</span></h1>
+                <h3>Founder President Sri</h3>
+                <h3>Lokmani Lal Ji (1912-1993)</h3>
+				Lokmani Lal was born on 20 December 1912 at Meerut. He lost his parents by the
+                    age of five years; his brother Shri Bhikkanlal ji brought him up. He worked hard as a student and
+                    also learnt values of truth, goodness, honesty, sincerity, love, sense of duty, humility, faith
+                    ample tolerance. His sharp mind quickly perceived that patriotism, freedom from the British rule was
+					the only rapid route to national advancement.Close association with great nationalists like Pt.
+                    Madan Mohan Malviya, Mahatma Gandhi, instilled in him the spirit to dedicate his life to the service
+                    of the nation. He had completed his graduation from BHU as an engineer. He was the pioneer of cold
+                    storage industry in India. He established the first cold storage in Meerut. Afterwards, he setup a
+                    chain of storages all over India in Lahore, Farukhabaad, Kolkata, Allahabad.
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <img style="height:300px;width:100%;margin-top:170px;" src="{% static 'gallery/15.jpg'%}">
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <p>Even during his life-time MPVM became an important institution for integrated development of child where the
+            teachers help to blossom the physical, mental, emotional spiritual bud of a child, to make him a fully
+            equipped individual ready to face the challenges of life. At present in our country there are many
+            educational institutions with a foreign outlook, externally attractive, but devoid of any Indian value
+            content. This led to the foundation of Maharshi Patanjali Vidya Mandir in 1986. He was keen to develop
+            forward looking progressive educational institutions. He dreamt of an institution which would promote the
+            study of Sanskrit, Indian culture, Yoga, different branches in engineering.</p>
+        <div class="about-icons">
+            <ul>
+                <li><a href="https://www.facebook.com/"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a></li>
+                <li><a href="https://twitter.com/"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a></li>
+                <li><a href="https://plus.google.com/"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a></li>
+                <li><a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+{% endblock %}

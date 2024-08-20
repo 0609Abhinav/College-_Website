@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"/>
+    <style>
+        .i:hover
+        {
+       color:#0076ec;
+       trasition:all ease 1;
+        }
+           .ufooter
+       {
+       min-height:200px;
+       background:#808080;
+       }
+       .bfooter
+       {
+       min-height:40px;
+       margin-top:-3px;
+       background:black;
+       }
+       .u
+        {
+        border-radius:10px;
+        border-bottom:5px solid transparent;
+        }
+       .u:hover
+        {
+        border-radius:10px;
+        border-bottom:3px solid #F93154;
+        }
+
+
+
+#cecdcd
+    </style>
+</head>
+<body>
+<div class="container-fluid outer" style="background:#eeeeee;">
+    <div class="row bg-success p-1" style="color:white;text-align:center;height:30px;">
+        <div class="col-sm-4">
+            <i class="fa fa-phone ic"></i>+91-7007237006
+        </div>
+        <div class="col-sm-4">
+            An ISO 9001:2015 Certified
+        </div>
+        <div class="col-sm-4">
+            <a style="color:white;" href="https://www.facebook.com/abhinav2017/"><i class="fa fa-facebook ic"></i></a>
+            <a style="color:white;" href="https://www.youtube.com/"><i class="fa fa-youtube ic"></i></a>
+            <i class="fa fa-whatsapp ic" title="9621854341"></i>
+            <a style="color:white;" href="https://www.instagram.com/_abhinavtripathi/"><i class="fa fa-instagram ic"></i></a>
+        </div>
+    </div>
+    <div class="row bg-light">
+        <div class="col-sm-4 mt-2">
+            <img style="height:150px;padding-left:80px;" src="{% static 'images/logo.png'%}">
+        </div>
+        <div class="col-sm-8 py-5 i">
+            <h1 style="font-size:60px;">Oxford <b style="color:#FFA000">University<i class="fa fa-university"
+                                                                                     aria-hidden="true"></i></b></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 bg-light" style="font-size:15px;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item ">
+                                <a class="nav-link active u" aria-current="page" href="/user/home/"><i
+                                        class="fa fa-home "></i><span style="color:blue">Home</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/about/"><i class="fa fa-users"></i><span
+                                        style="color:blue">About Us</span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle u" href="/user/courses/" id="navbarDropdown"
+                                   role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span style="color:blue"> Courses Info</span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item u" href="/user/courses/">Information Technology</a></li>
+                                    <li><a class="dropdown-item u" href="/user/courses/">Computer Science</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item u" href="/user/courses/">Electronics</a></li>
+                                </ul>
+                            </li>
+                              <li class="nav-item">
+                                  <a class="nav-link u" href="/user/fees/"><i class="fa fa-info-circle"></i><span
+                                        style="color:blue">Fees Details</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/placements/"><i class="fa fa-pencil"></i><span
+                                        style="color:blue">Placement</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/signup/"><i class="fa fa-user"></i><span
+                                        style="color:blue">Sign Up</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/contactus/"><i class="fa fa-id-card"></i><span
+                                        style="color:blue">Contact Us</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/recruiters/"><i class="fa fa-briefcase"></i><span
+                                        style="color:blue">Recruiters</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/gallery/"><i class="fa fa-image"></i><span
+                                        style="color:blue">Gallery</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link u" href="/user/faculty/"><i class="fa fa-user-plus"></i><span
+                                        style="color:blue">Our Faculty</span></a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-1" style="width:115px;" type="search" placeholder="Search"
+                                   aria-label="Search">
+                            <a href="https://www.google.com/"><button class="btn btn-outline-success" style="width:70px;" type="submit">Search</button></a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-sm-12 ">
+            {% block content %}
+
+
+            {% endblock%}
+        </div>
+    </div>
+    <div class="row ufooter">
+        <div class="col-sm-4 p-3">
+            <img style="height:70px; width:270px;margin-top:10px;border-radius:8px;" src="{% static 'images/14.png' %}">
+            <img style="height:70px; width:270px;margin-top:10px;border-radius:8px;" src="{% static 'images/15.png' %}">
+            <img style="height:70px; width:270px;margin-top:10px;border-radius:8px;" src="{% static 'images/16.jpg' %}">
+        </div>
+        <div class="col-sm-4 fs-3">
+            <i class="fa fa-map-marker" style="color:white;">Office Addres</i><br/>
+            <b style="font-size:15px;color:white;"><p>San Francisco, CA 94126, USA</p></b>
+
+
+            <i class="fa fa-phone mt-4" style="color:white;">Call Us</i><br/>
+            <b style="font-size:15px;color:white;"><p>+91 9621854341</p></b>
+
+
+            <i class="fa fa-envelope mt-2" style="color:white;">Mail Us</i><br/>
+            <b style="font-size:15px;color:white;"><p>abhinavtripathi2015@gmail.com</p></b>
+        </div>
+        <div class="col-sm-4">
+            <h3 style="color:white;"><i class="fa fa-map-marker "></i>Our Location</h3>
+            <iframe style="border-radius:10px;border:4px solid black;max-width:400px; height:200px;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.8999972505103!2d-1.2555362453202803!3d51.75498075524503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876c6a9ef8c485b%3A0xd2ff1883a001afed!2sUniversity%20of%20Oxford!5e0!3m2!1sen!2sin!4v1632647975214!5m2!1sen!2sin"
+                    allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="row bfooter text-light bg-dark text-center py-2">
+            <div class="col-sm-6">
+                Developed By:Abhinav Tripathi(G.P.A. Bhadhoi)
+            </div>
+            <div class="col-sm-6">
+                &copy;Oxford University
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .l:hover
+    {
+    box-shadow:3px 3px 3px 3px #0080ff;
+    }
+</style>
+<h1 style="text-align:center;padding-top:30px;"> Courses<b style="color:Red;"> Details</b></h1>
+<div class="row p-5">
+
+    {% if fee %}
+    {% for x in fee %}
+    <div class="col-sm-3">
+        <div class="card"style="min-height:780px;">
+            <img src="/{{x.cpic}}" class="card-img-top l" alt="...">
+            <div class="card-body">
+                <h5 class="card-title l">COURSE:-{{x.pcourse}}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item l">Branch:-{{x.branch1}}</li>
+                    <li class="list-group-item l">Branch:-{{x.branch2}}</li>
+                    <li class="list-group-item l">Branch:-{{x.branch3}}</li>
+                    <li class="list-group-item l">H.O.D:-{{x.hodname}}</li>
+                    <li class="list-group-item l">Seats:-{{x.seats}}</li>
+                    <li class="list-group-item l">Fees(fees/year):-{{x.cfee}}</li>
+                    <li class="list-group-item l">Eligility:-{{x.eligibility}}</li>
+                    <li class="list-group-item l">Desiganation:-{{x.due}}</li>
+                    <li class="list-group-item l">Stablish Date:-{{x.sdate}}</li>
+                    <li class="list-group-item l">{{x.pdate}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+</div>
+{% endblock %}

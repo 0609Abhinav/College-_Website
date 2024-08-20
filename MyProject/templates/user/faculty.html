@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+
+    {% if b%}
+    {% for x in b%}
+    <div class="col-sm-5 "style="margin-left:70px;">
+        <div class="card mt-4 mb-4" style="max-width:450px;border:2px solid black">
+            <div class="row">
+                <div class="col-md-4 p-3">
+                    <img style="border-radius:70%;" src="/{{x.tpic}}" class="d block w-100 p-1" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Staff Name -<span>{{x.name}}</span></h5>
+                        <h6>Brance - <span>{{x.branch}}</span></h6>
+                        <h6>Designation-<span>{{x.des}}</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}
